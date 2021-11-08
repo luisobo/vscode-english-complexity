@@ -1,0 +1,47 @@
+{
+	"name": "vscode-english-complexity",
+	"description": "A VS Code Extension to calculate the complexity of your english.",
+	"version": "0.0.1",
+	"publisher": "luisobo",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"repository": {
+		"url": "https://github.com/luisobo/vscode-english-complexity"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"colors": [
+			{
+				"id": "myextension.largeNumberBackground",
+				"description": "Background decoration color for large numbers",
+				"defaults": {
+					"dark": "#FF000055",
+					"light": "#FF000055",
+					"highContrast": "#FF000055"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.32.0",
+		"@typescript-eslint/eslint-plugin": "^4.16.0",
+		"@typescript-eslint/parser": "^4.16.0",
+		"eslint": "^7.21.0",
+		"typescript": "^4.4.3"
+	}
+}
