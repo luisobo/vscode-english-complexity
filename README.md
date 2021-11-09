@@ -1,6 +1,8 @@
 # VS Code English Complexity
 
-This VS Code Extension highlights complex sentences in your english writing. It works on plain text and markdown files.
+This VS Code Extension highlights complex sentences in your english writing. It works on plain text and markdown files. Use shorter words and sentences to make then easier to read.
+
+![screenshot](screenshot.png)
 
 ## Running the Extension
 
