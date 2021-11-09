@@ -14,21 +14,21 @@
 		"Other"
 	],
 	"activationEvents": [
-		"*"
+		"onLanguage:plaintext",
+		"onLanguage:markdown"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"colors": [
-			{
-				"id": "myextension.largeNumberBackground",
-				"description": "Background decoration color for large numbers",
-				"defaults": {
-					"dark": "#FF000055",
-					"light": "#FF000055",
-					"highContrast": "#FF000055"
+		"configuration": {
+			"title": "English Complexity",
+			"properties": {
+				"englishcomplexity.complexityThreshold": {
+					"type": "number",
+					"default": 60,
+					"description": "Sentences with a score lower than this threshold are highlighted as complex."
 				}
 			}
-		]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -45,6 +45,7 @@
 		"typescript": "^4.4.3"
 	},
 	"dependencies": {
+		"sentence-splitter": "^3.2.2",
 		"text-readability": "^1.0.5"
 	}
 }
